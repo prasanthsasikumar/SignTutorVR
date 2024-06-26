@@ -18,9 +18,6 @@ MonoBehaviour:
     - _mode: 0
       _feature: 0
       _state: 1
-    - _mode: 0
-      _feature: 2
-      _state: 8
   _indexFeatureConfigs:
     _value:
     - _mode: 0
@@ -29,12 +26,6 @@ MonoBehaviour:
     - _mode: 0
       _feature: 1
       _state: 4
-    - _mode: 0
-      _feature: 2
-      _state: 7
-    - _mode: 0
-      _feature: 3
-      _state: 10
   _middleFeatureConfigs:
     _value:
     - _mode: 0
@@ -43,12 +34,6 @@ MonoBehaviour:
     - _mode: 0
       _feature: 1
       _state: 4
-    - _mode: 0
-      _feature: 2
-      _state: 7
-    - _mode: 0
-      _feature: 3
-      _state: 10
   _ringFeatureConfigs:
     _value:
     - _mode: 0
@@ -57,12 +42,6 @@ MonoBehaviour:
     - _mode: 0
       _feature: 1
       _state: 4
-    - _mode: 0
-      _feature: 2
-      _state: 7
-    - _mode: 0
-      _feature: 3
-      _state: 10
   _pinkyFeatureConfigs:
     _value:
     - _mode: 0
@@ -71,9 +50,3 @@ MonoBehaviour:
     - _mode: 0
       _feature: 1
       _state: 4
-    - _mode: 0
-      _feature: 2
-      _state: 7
-    - _mode: 0
-      _feature: 3
-      _state: 10

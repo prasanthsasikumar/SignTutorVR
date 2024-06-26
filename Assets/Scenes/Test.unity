@@ -579,6 +579,7 @@ GameObject:
   - component: {fileID: 305454103}
   - component: {fileID: 305454102}
   - component: {fileID: 305454101}
+  - component: {fileID: 305454105}
   m_Layer: 0
   m_Name: Letter E
   m_TagString: Untagged
@@ -616,7 +617,19 @@ MonoBehaviour:
   _selector: {fileID: 305454102}
   _whenSelected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1024083733}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: RecognizeLetter
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: E
+          m_BoolArgument: 0
+        m_CallState: 2
   _whenUnselected:
     m_PersistentCalls:
       m_Calls: []
@@ -632,7 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd9780be7e512049b4d33d5c9d0ac92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _activeState: {fileID: 305454103}
+  _activeState: {fileID: 305454105}
 --- !u!114 &305454103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,6 +675,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hand: {fileID: 1325823193}
+--- !u!114 &305454105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305454099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6f9440d09721c849864899e8986e219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hand: {fileID: 305454104}
+  _transformFeatureStateProvider: {fileID: 1325823199}
+  _transformFeatureConfigs:
+    _values:
+    - _mode: 0
+      _feature: 5
+      _state: 15
+    - _mode: 0
+      _feature: 7
+      _state: 23
+  _transformConfig:
+    PositionOffset: {x: 0, y: 0, z: 0}
+    RotationOffset: {x: 0, y: 0, z: 0}
+    UpVectorType: 0
+    FeatureThresholds: {fileID: 11400000, guid: 02f0960c5ee522d40a6443a14126b7a5, type: 2}
 --- !u!1 &314384254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,7 +1878,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906571215}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6137da04b96b3a5458fac63522c5ac3f, type: 3}
   m_Name: 
@@ -2198,6 +2238,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 827b4e82e1fb72a458d56bfabe952678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetWord: ICE
+  currentInput: 
+  timeLimit: 2
+  currentIndex: 0
+  onWordCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 906571218}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1190243835
 GameObject:
   m_ObjectHideFlags: 0
@@ -2470,15 +2529,15 @@ MonoBehaviour:
   _hand: {fileID: 1325823193}
   _fingerStateThresholds:
   - Finger: 0
-    StateThresholds: {fileID: 11400000, guid: 1ee82d2d63daf8b4c93040e331f8e801, type: 2}
+    StateThresholds: {fileID: 11400000, guid: 22470403a618cd44d9a2eaa0fd457b1e, type: 2}
   - Finger: 1
-    StateThresholds: {fileID: 11400000, guid: 29b0a95ffa0254044901c8c821379040, type: 2}
+    StateThresholds: {fileID: 11400000, guid: 409243802071ccd408f6dbbcf6a633af, type: 2}
   - Finger: 2
-    StateThresholds: {fileID: 11400000, guid: 6654d266dec806d458e8c45751c96535, type: 2}
+    StateThresholds: {fileID: 11400000, guid: 190ba047e8d676d45b94b0d1f2e3152d, type: 2}
   - Finger: 3
-    StateThresholds: {fileID: 11400000, guid: 8b470e0c4b48d474c9a42d7f661d48c7, type: 2}
+    StateThresholds: {fileID: 11400000, guid: 4aee8b707b11e9c4aa3b234806c388ee, type: 2}
   - Finger: 4
-    StateThresholds: {fileID: 11400000, guid: 8b470e0c4b48d474c9a42d7f661d48c7, type: 2}
+    StateThresholds: {fileID: 11400000, guid: 4aee8b707b11e9c4aa3b234806c388ee, type: 2}
   _disableProactiveEvaluation: 0
 --- !u!114 &1325823198
 MonoBehaviour:
@@ -2820,16 +2879,16 @@ MonoBehaviour:
   _whenSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1024083733}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: RecognizeLetter
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: C
           m_BoolArgument: 0
         m_CallState: 2
   _whenUnselected:
@@ -2957,14 +3016,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1024083733}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: set_I
-        m_Mode: 6
+        m_MethodName: RecognizeLetter
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: I
           m_BoolArgument: 1
         m_CallState: 2
   _whenUnselected:
