@@ -73,6 +73,8 @@ public class GameManager : MonoBehaviour
                 if (IsIceDetected)
                 {
                     currentState = GameState.WaitForCoffeeGesture;
+                    waitressAnimator.Play("TPE_salute1");
+                    waitressAnimator.SetBool("isLooping", false);
                     DisableAllExcept(iceDisable);
                     EnableAllExcept(iceEnable);
                 }
@@ -95,7 +97,7 @@ public class GameManager : MonoBehaviour
                 // Optionally, transition state based on animation event or time
 
                 // For simplicity, simulate wait time (you can replace with actual logic)
-                Invoke("DeliverCoffeeState", 1.5f); // Example: Wait 1.5 seconds before proceeding
+                Invoke("DeliverCoffeeState", 3f); // Example: Wait 1.5 seconds before proceeding
                 break;
 
             case GameState.DeliverCoffee:
@@ -139,7 +141,7 @@ public class GameManager : MonoBehaviour
     // Methods to transition between states (replace with actual logic if needed)
     void ProceedToIceGestureState()
     {
-        currentState = GameState.WaitForCoffeeGesture;
+        currentState = GameState.WaitForIceGesture;
         DisableAllExcept(iceDisable);
         EnableAllExcept(iceEnable);
     }
