@@ -11,7 +11,7 @@ public class Server : MonoBehaviour
     private TcpListener server;
     private Thread serverThread;
 
-    public UnityEvent i, c, e;
+    public UnityEvent i, c, e, thankyou;
 
     void Start()
     {
@@ -58,6 +58,11 @@ public class Server : MonoBehaviour
         else if (command == "C")
         {
             c.Invoke();
+        }
+        else if (command == "thankyou")
+        {
+            //thankyou.Invoke();
+            Debug.Log("Thank you");
         }
         // Add more commands as needed
     }
